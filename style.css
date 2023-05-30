@@ -1,0 +1,149 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+body{
+  background: #093847;
+  color:white;
+}
+
+.card {
+  width: 400px; /* Adjust the width as needed */
+  margin: 100px auto 0;
+  padding: 20px;
+  background-image: linear-gradient(45deg, #4c8bf5, #32c4f5);
+  border-radius: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search input{
+  border: 0;
+  outline: 0;
+  background: #ebfffc;
+  color: #555;
+  padding: 10px 25px;
+  height: 60px;
+  border-radius: 30px;
+  flex: 1;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 30px;
+  border: none;
+  background-color: #eee;
+  border-radius: 20px;
+  font-size: 16px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1) inset;
+  color: #333;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  transition: background-color 0.5s ease;
+}
+
+button:hover {
+  background-color: #98c2f7;
+}
+
+button img {
+  width: 20px; /* Adjust the size of the search icon as needed */
+  height: 25px;
+}
+
+.weather-icon{
+  width: 170px;
+  margin-top: 30px;
+}
+
+.weather h1{
+  font-size: 80px;
+  font-weight: 500;
+}
+
+.weather h2{
+  font-size: 45px;
+  font-weight: 400;
+  margin-top: -10px;
+}
+
+.details{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  margin-top: 50px;
+}
+.col{
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+.col img{
+  width: 40px;
+  margin-right: 10px;
+}
+
+.weather{
+  display: none;
+}
+
+h3{
+  padding-top: 20px;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.card {
+  animation: slide-up 2s ease forwards;
+}
+
+.card {
+  /* ...existing styles... */
+  transition: height 0.5s ease;
+  height: 105px; /* Set an initial height for the card */
+}
+
+.weather {
+  /* ...existing styles... */
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 1.5s ease;
+  transform: translateY(-20px); /* Set an initial position above the card */
+}
+
+.card.expanded {
+  height: 600px; /* Set an expanded height for the card */
+}
+
+.weather.expanded {
+  opacity: 1;
+  transform: translateY(0);
+}
